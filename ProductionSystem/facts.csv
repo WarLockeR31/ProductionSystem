@@ -1,0 +1,70 @@
+﻿fact_id;fact_code;kind;default_cf;description
+F001;likes_math;input;1;Студент любит математику
+F002;likes_statistics;input;1;Студент любит статистику
+F003;likes_algorithms;input;1;Студенту нравятся алгоритмы и задачи
+F004;likes_design;input;1;Студенту нравится дизайн и визуальная часть
+F005;likes_ui_ux;input;1;Студенту интересен UX/UI
+F006;likes_system_programming;input;1;Студенту интересны низкоуровневые вещи и системы
+F007;likes_games;input;1;Студенту интересна разработка игр
+F008;likes_mobile;input;1;Студенту интересна мобильная разработка
+F009;likes_web;input;1;Студенту интересна веб-разработка
+F010;likes_data_analysis;input;1;Студент любит анализ данных
+F011;likes_research;input;1;Студенту интересна научная деятельность
+F012;likes_management;input;1;Студенту интересен менеджмент и управление
+F013;likes_infrastructure;input;1;Студенту интересна инфраструктура и администрирование
+F014;likes_automation;input;1;Студенту интересно автоматизировать процессы
+F015;likes_product_thinking;input;1;Студенту интересен продакт-менеджмент и продуктовое мышление
+F016;knows_python;input;1;Студент уже программировал на Python
+F017;knows_java;input;1;Студент уже программировал на Java
+F018;knows_csharp;input;1;Студент уже программировал на C#
+F019;knows_js;input;1;Студент уже программировал на JavaScript
+F020;knows_c;input;1;Студент уже программировал на C/С++
+F021;knows_sql;input;1;Студент знаком с SQL
+F022;knows_html_css;input;1;Студент знаком с HTML и CSS
+F023;knows_linux;input;1;Студент умеет работать с Linux
+F024;knows_git;input;1;Студент умеет пользоваться Git
+F025;knows_ml_basics;input;1;Студент знаком с базами машинного обучения
+F026;knows_statistics_basics;input;1;Студент знаком с основами статистики
+F027;wants_remote;input;1;Студент хочет работать удалённо
+F028;wants_high_salary;input;1;Студенту важна высокая зарплата
+F029;wants_stability;input;1;Студенту важна стабильность и предсказуемость
+F030;wants_flex_schedule;input;1;Студенту важен гибкий график
+F031;wants_fast_entry;input;1;Студент хочет быстрее выйти на работу в IT
+F032;ok_with_long_study;input;1;Студент готов долго учиться ради интересной области
+F033;prefers_teamwork;input;1;Студент предпочитает командную работу
+F034;prefers_individual_work;input;1;Студент предпочитает работать в одиночку
+F035;math_strong;input;1;У студента сильная математика
+F036;math_medium;input;1;У студента средний уровень математики
+F037;math_weak;input;1;У студента слабая математика
+F038;cs_theory_strong;input;1;Студент хорошо понимает теорию CS
+F039;cs_theory_weak;input;1;Студенту не хватает теоретической базы
+F040;english_good;input;1;У студента хороший английский
+F041;english_basic;input;1;У студента базовый английский
+F042;oriented_to_backend;intermediate;1;Склонность к backend-разработке
+F043;oriented_to_frontend;intermediate;1;Склонность к frontend-разработке
+F044;oriented_to_fullstack;intermediate;1;Склонность к fullstack-разработке
+F045;oriented_to_data_science;intermediate;1;Склонность к data science
+F046;oriented_to_machine_learning;intermediate;1;Склонность к машинному обучению
+F047;oriented_to_analytics;intermediate;1;Склонность к аналитике данных
+F048;oriented_to_game_dev;intermediate;1;Склонность к разработке игр
+F049;oriented_to_mobile;intermediate;1;Склонность к мобильной разработке
+F050;oriented_to_devops;intermediate;1;Склонность к DevOps/SRE
+F051;oriented_to_management;intermediate;1;Склонность к менеджменту
+F052;oriented_to_research;intermediate;1;Склонность к академической/исследовательской деятельности
+F053;prefers_high_level;intermediate;1;Предпочитает высокоуровневые технологии
+F054;prefers_low_level;intermediate;1;Предпочитает низкоуровневое программирование
+F055;prefers_visual_tasks;intermediate;1;Любит визуальные задачи
+F056;prefers_data_tasks;intermediate;1;Любит задачи с данными
+F057;prefers_infrastructure_tasks;intermediate;1;Любит инфраструктурные задачи
+F058;path_backend_junior;target;1;Рекомендована траектория: Backend-разработчик (junior)
+F059;path_frontend_junior;target;1;Рекомендована траектория: Frontend-разработчик (junior)
+F060;path_fullstack_junior;target;1;Рекомендована траектория: Fullstack-разработчик (junior)
+F061;path_datascience;target;1;Рекомендована траектория: Data Scientist
+F062;path_ml_engineer;target;1;Рекомендована траектория: ML Engineer
+F063;path_data_analyst;target;1;Рекомендована траектория: Аналитик данных
+F064;path_game_developer;target;1;Рекомендована траектория: Game Developer
+F065;path_mobile_developer;target;1;Рекомендована траектория: Mobile Developer
+F066;path_devops_engineer;target;1;Рекомендована траектория: DevOps Engineer
+F067;path_product_manager;target;1;Рекомендована траектория: Product Manager
+F068;path_project_manager_it;target;1;Рекомендована траектория: Project Manager в IT
+F069;path_researcher;target;1;Рекомендована траектория: Исследователь/академическая карьера
