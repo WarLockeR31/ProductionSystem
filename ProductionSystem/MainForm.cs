@@ -8,6 +8,8 @@ public partial class MainForm : Form
 	
 	private string _factsPath = "";
 	private string _rulesPath = "";
+	private ForwardResult? _lastForwardResult;
+	private BackwardResult? _lastBackwardResult;
 
 	public MainForm()
 	{
@@ -47,6 +49,8 @@ public partial class MainForm : Form
 
 		var forwardResult = ForwardReasoner.Run(_kb, initialFacts, goalFactId);
 		var explanation = ExplanationBuilder.BuildForwardExplanation(_kb, forwardResult);
+		
+		_lastForwardResult = forwardResult;
 
 		textBoxOutput.Text = explanation;
 	}
@@ -68,6 +72,8 @@ public partial class MainForm : Form
 		var goalFact = (Fact)comboBoxGoal.SelectedItem;
 		var backwardResult = BackwardReasoner.Prove(_kb, goalFact.Id, initialFacts);
 		var explanation = ExplanationBuilder.BuildBackwardExplanation(_kb, goalFact.Id, backwardResult);
+		
+		_lastBackwardResult = backwardResult;
 
 		textBoxOutput.Text = explanation;
 	}
@@ -85,6 +91,9 @@ public partial class MainForm : Form
 			_kb = new KnowledgeBase();
 			_kb.LoadFacts(_factsPath);
 			_kb.LoadRules(_rulesPath);
+			
+			_lastForwardResult = null;
+			_lastBackwardResult = null;
 
 			InitUi();
 
@@ -133,6 +142,23 @@ public partial class MainForm : Form
 		{
 			checkedListBoxFacts.SetItemChecked(i, false);
 		}
+	}
+	
+	private void buttonGraph_Click(object sender, EventArgs e)
+	{
+		if (_kb == null || _kb.Facts.Count == 0)
+		{
+			MessageBox.Show("Сначала загрузите базу знаний.",
+				"Нет данных", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			return;
+		}
+
+		var form = new GraphForm(
+			_kb,
+			_lastForwardResult,
+			_lastBackwardResult);
+
+		form.Show();  
 	}
 }
 
