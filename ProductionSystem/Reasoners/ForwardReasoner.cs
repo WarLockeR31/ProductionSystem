@@ -3,8 +3,8 @@ namespace ProductionSystem.Reasoners;
 public class ForwardStep(Rule? rule, string newFactId)
 {
 	public Rule?			Rule		{ get; set; } = rule;
-	public List<string> UsedFacts	{ get; set; } = new List<string>();
-	public string		NewFactId	{ get; set; } = newFactId;
+	public List<string>		UsedFacts	{ get; set; } = new List<string>();
+	public string			NewFactId	{ get; set; } = newFactId;
 	
 	public ForwardStep(Rule? rule, string newFactId, IEnumerable<string> usedFacts) 
 		: this(rule, newFactId)

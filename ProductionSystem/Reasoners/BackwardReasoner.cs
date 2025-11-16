@@ -23,13 +23,13 @@ class GoalFrame(string factId, Rule? currentRule)
 class ProvenFact(string factId, Rule? rule, List<string> premises)
 {
 	public string		FactId		{ get; set; } = factId;
-	public Rule?			Rule		{ get; set; } = rule;
+	public Rule?		Rule		{ get; set; } = rule;
 	public List<string> Premises	{ get; set; } = premises;
 }
 
 public class RuleApplication(Rule? rule, string derivedFactId, List<string> premises, int depth)
 {
-	public Rule?			Rule			{ get; set; } = rule;
+	public Rule?		Rule			{ get; set; } = rule;
 	public string		DerivedFactId	{ get; set; } = derivedFactId;
 	public List<string> Premises		{ get; set; } = premises;
 	public int			Depth			{ get; set; } = depth;
@@ -37,9 +37,9 @@ public class RuleApplication(Rule? rule, string derivedFactId, List<string> prem
 
 public class BackwardResult(bool success)
 {
-	public bool						Success			{ get; set; }	= success;
-	public HashSet<string>			UsedFacts		{ get; private set; }		= new HashSet<string>();
-	public List<RuleApplication>	RuleSequence	{ get; private set; }		= new List<RuleApplication>();
+	public bool						Success			{ get; set; }			= success;
+	public HashSet<string>			UsedFacts		{ get; private set; }	= new HashSet<string>();
+	public List<RuleApplication>	RuleSequence	{ get; private set; }	= new List<RuleApplication>();
 	
 	public BackwardResult(bool success, HashSet<string> usedFacts)
 		: this(success)

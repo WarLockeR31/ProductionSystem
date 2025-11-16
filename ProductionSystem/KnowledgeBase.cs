@@ -3,7 +3,7 @@ namespace ProductionSystem;
 public class KnowledgeBase
 {
 	public Dictionary<string, Fact> Facts { get; } = new Dictionary<string, Fact>();
-	public List<Rule?> Rules { get; } = new List<Rule?>();
+	public List<Rule?>				Rules { get; } = new List<Rule?>();
 
 	public void LoadFacts(string path)
 	{
