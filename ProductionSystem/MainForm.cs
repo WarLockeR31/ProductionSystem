@@ -14,12 +14,6 @@ public partial class MainForm : Form
 		InitializeComponent();
 	}
 
-	private void LoadKnowledgeBase()
-	{
-		_kb.LoadFacts("facts.csv");
-		_kb.LoadRules("rules.csv");
-	}
-
 	private void InitUi()
 	{
 		checkedListBoxFacts.DisplayMember = "Description";
@@ -106,34 +100,38 @@ public partial class MainForm : Form
 
 	private void buttonSelectFacts_Click(object sender, EventArgs e)
 	{
-		using (var ofd = new OpenFileDialog())
+		using var ofd = new OpenFileDialog();
+		ofd.Title = "Выберите файл facts.csv";
+		ofd.Filter = "CSV файлы (*.csv)|*.csv|Все файлы (*.*)|*.*";
+
+		if (ofd.ShowDialog() == DialogResult.OK)
 		{
-			ofd.Title = "Выберите файл facts.csv";
-			ofd.Filter = "CSV файлы (*.csv)|*.csv|Все файлы (*.*)|*.*";
+			_factsPath = ofd.FileName;
 
-			if (ofd.ShowDialog() == DialogResult.OK)
-			{
-				_factsPath = ofd.FileName;
-
-				TryLoadKnowledgeBase();
-			}
+			TryLoadKnowledgeBase();
 		}
 	}
 
 
 	private void buttonSelectRules_Click(object sender, EventArgs e)
 	{
-		using (var ofd = new OpenFileDialog())
+		using var ofd = new OpenFileDialog();
+		ofd.Title = "Выберите файл rules.csv";
+		ofd.Filter = "CSV файлы (*.csv)|*.csv|Все файлы (*.*)|*.*";
+
+		if (ofd.ShowDialog() == DialogResult.OK)
 		{
-			ofd.Title = "Выберите файл rules.csv";
-			ofd.Filter = "CSV файлы (*.csv)|*.csv|Все файлы (*.*)|*.*";
+			_rulesPath = ofd.FileName;
 
-			if (ofd.ShowDialog() == DialogResult.OK)
-			{
-				_rulesPath = ofd.FileName;
+			TryLoadKnowledgeBase();
+		}
+	}
 
-				TryLoadKnowledgeBase();
-			}
+	private void buttonClearSelection_Click(object sender, EventArgs e)
+	{
+		for (int i = 0; i < checkedListBoxFacts.Items.Count; i++)
+		{
+			checkedListBoxFacts.SetItemChecked(i, false);
 		}
 	}
 }

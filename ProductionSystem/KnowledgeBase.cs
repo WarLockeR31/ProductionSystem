@@ -35,7 +35,7 @@ public class KnowledgeBase
 		{
 			if (string.IsNullOrWhiteSpace(line)) continue;
 			if (line.StartsWith("...")) continue;
-			if (line.StartsWith(";")) continue;    /
+			if (line.StartsWith(";")) continue;   
 
 			var parts = line.Split(';');
 			if (parts.Length < 5) continue;

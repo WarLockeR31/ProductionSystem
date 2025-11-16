@@ -1,70 +1,101 @@
 ﻿fact_id;fact_code;kind;default_cf;description
-F001;likes_math;input;1;Студент любит математику
-F002;likes_statistics;input;1;Студент любит статистику
-F003;likes_algorithms;input;1;Студенту нравятся алгоритмы и задачи
-F004;likes_design;input;1;Студенту нравится дизайн и визуальная часть
-F005;likes_ui_ux;input;1;Студенту интересен UX/UI
-F006;likes_system_programming;input;1;Студенту интересны низкоуровневые вещи и системы
-F007;likes_games;input;1;Студенту интересна разработка игр
-F008;likes_mobile;input;1;Студенту интересна мобильная разработка
-F009;likes_web;input;1;Студенту интересна веб-разработка
-F010;likes_data_analysis;input;1;Студент любит анализ данных
-F011;likes_research;input;1;Студенту интересна научная деятельность
-F012;likes_management;input;1;Студенту интересен менеджмент и управление
-F013;likes_infrastructure;input;1;Студенту интересна инфраструктура и администрирование
-F014;likes_automation;input;1;Студенту интересно автоматизировать процессы
-F015;likes_product_thinking;input;1;Студенту интересен продакт-менеджмент и продуктовое мышление
-F016;knows_python;input;1;Студент уже программировал на Python
-F017;knows_java;input;1;Студент уже программировал на Java
-F018;knows_csharp;input;1;Студент уже программировал на C#
-F019;knows_js;input;1;Студент уже программировал на JavaScript
-F020;knows_c;input;1;Студент уже программировал на C/С++
-F021;knows_sql;input;1;Студент знаком с SQL
-F022;knows_html_css;input;1;Студент знаком с HTML и CSS
-F023;knows_linux;input;1;Студент умеет работать с Linux
-F024;knows_git;input;1;Студент умеет пользоваться Git
-F025;knows_ml_basics;input;1;Студент знаком с базами машинного обучения
-F026;knows_statistics_basics;input;1;Студент знаком с основами статистики
-F027;wants_remote;input;1;Студент хочет работать удалённо
-F028;wants_high_salary;input;1;Студенту важна высокая зарплата
-F029;wants_stability;input;1;Студенту важна стабильность и предсказуемость
-F030;wants_flex_schedule;input;1;Студенту важен гибкий график
-F031;wants_fast_entry;input;1;Студент хочет быстрее выйти на работу в IT
-F032;ok_with_long_study;input;1;Студент готов долго учиться ради интересной области
-F033;prefers_teamwork;input;1;Студент предпочитает командную работу
-F034;prefers_individual_work;input;1;Студент предпочитает работать в одиночку
-F035;math_strong;input;1;У студента сильная математика
-F036;math_medium;input;1;У студента средний уровень математики
-F037;math_weak;input;1;У студента слабая математика
-F038;cs_theory_strong;input;1;Студент хорошо понимает теорию CS
-F039;cs_theory_weak;input;1;Студенту не хватает теоретической базы
-F040;english_good;input;1;У студента хороший английский
-F041;english_basic;input;1;У студента базовый английский
-F042;oriented_to_backend;intermediate;1;Склонность к backend-разработке
-F043;oriented_to_frontend;intermediate;1;Склонность к frontend-разработке
-F044;oriented_to_fullstack;intermediate;1;Склонность к fullstack-разработке
-F045;oriented_to_data_science;intermediate;1;Склонность к data science
-F046;oriented_to_machine_learning;intermediate;1;Склонность к машинному обучению
-F047;oriented_to_analytics;intermediate;1;Склонность к аналитике данных
-F048;oriented_to_game_dev;intermediate;1;Склонность к разработке игр
-F049;oriented_to_mobile;intermediate;1;Склонность к мобильной разработке
-F050;oriented_to_devops;intermediate;1;Склонность к DevOps/SRE
-F051;oriented_to_management;intermediate;1;Склонность к менеджменту
-F052;oriented_to_research;intermediate;1;Склонность к академической/исследовательской деятельности
-F053;prefers_high_level;intermediate;1;Предпочитает высокоуровневые технологии
-F054;prefers_low_level;intermediate;1;Предпочитает низкоуровневое программирование
-F055;prefers_visual_tasks;intermediate;1;Любит визуальные задачи
-F056;prefers_data_tasks;intermediate;1;Любит задачи с данными
-F057;prefers_infrastructure_tasks;intermediate;1;Любит инфраструктурные задачи
-F058;path_backend_junior;target;1;Рекомендована траектория: Backend-разработчик (junior)
-F059;path_frontend_junior;target;1;Рекомендована траектория: Frontend-разработчик (junior)
-F060;path_fullstack_junior;target;1;Рекомендована траектория: Fullstack-разработчик (junior)
-F061;path_datascience;target;1;Рекомендована траектория: Data Scientist
-F062;path_ml_engineer;target;1;Рекомендована траектория: ML Engineer
-F063;path_data_analyst;target;1;Рекомендована траектория: Аналитик данных
-F064;path_game_developer;target;1;Рекомендована траектория: Game Developer
-F065;path_mobile_developer;target;1;Рекомендована траектория: Mobile Developer
-F066;path_devops_engineer;target;1;Рекомендована траектория: DevOps Engineer
-F067;path_product_manager;target;1;Рекомендована траектория: Product Manager
-F068;path_project_manager_it;target;1;Рекомендована траектория: Project Manager в IT
-F069;path_researcher;target;1;Рекомендована траектория: Исследователь/академическая карьера
+F001;proj_2d;input;1;Проект планируется в 2D
+F002;proj_2_5d;input;1;Проект планируется в 2.5D
+F003;proj_3d;input;1;Проект планируется в 3D
+F004;genre_action_rpg;input;1;Жанр проекта: action-RPG
+F005;genre_platformer;input;1;Жанр проекта: платформер
+F006;genre_roguelike;input;1;Жанр проекта: рогалик / roguelite
+F007;genre_card_game;input;1;Жанр проекта: коллекционная карточная игра
+F008;genre_moba;input;1;Жанр проекта: MOBA
+F009;genre_shooter;input;1;Жанр проекта: шутер
+F010;platform_pc;input;1;Целевая платформа: ПК
+F011;platform_mobile;input;1;Целевая платформа: мобильные устройства
+F012;platform_console;input;1;Целевая платформа: консоль
+F013;audience_casual;input;1;Целевая аудитория: казуальные игроки
+F014;audience_midcore;input;1;Целевая аудитория: midcore
+F015;audience_hardcore;input;1;Целевая аудитория: хардкорные игроки
+F016;focus_combat;input;1;Основной фокус: боевая система
+F017;focus_story;input;1;Основной фокус: сюжет и нарратив
+F018;focus_puzzles;input;1;Основной фокус: головоломки и задачи
+F019;focus_management;input;1;Основной фокус: менеджмент, экономика, метаигра
+F020;sessions_short;input;1;Сессии предполагаются короткие (до 20 минут)
+F021;sessions_long;input;1;Сессии предполагаются длинные
+F022;monet_premium;input;1;Монетизация: единоразовая покупка (premium)
+F023;monet_f2p;input;1;Монетизация: free-to-play
+F024;monet_battle_pass;input;1;Монетизация: battle pass
+F025;monet_gacha;input;1;Монетизация: gacha / лутбоксы
+F026;camera_topdown;input;1;Камера: вид сверху
+F027;camera_isometric;input;1;Камера: изометрия
+F028;camera_side;input;1;Камера: сбоку
+F029;camera_third_person;input;1;Камера: от третьего лица
+F030;camera_first_person;input;1;Камера: от первого лица
+F031;profile_combat_2d_roguelite;intermediate;1;Профиль боёвки: динамичный 2D action-roguelite
+F032;profile_combat_3d_soulslike;intermediate;1;Профиль боёвки: методичный 3D souls-like
+F033;profile_combat_topdown_twin_stick;intermediate;1;Профиль боёвки: top-down twin-stick shooter
+F034;profile_combat_moba_abilities;intermediate;1;Профиль боёвки: MOBA с активными способностями
+F035;profile_combat_mobile_casual;intermediate;1;Профиль боёвки: мобильный казуальный экшен
+F036;profile_combat_fps_arena;intermediate;1;Профиль боёвки: аренный FPS
+F037;profile_progression_run_based;intermediate;1;Профиль прогрессии: забеги (run-based) с перезапусками
+F038;profile_progression_linear_story;intermediate;1;Профиль прогрессии: линейная сюжетная кампания
+F039;profile_progression_open_world;intermediate;1;Профиль прогрессии: открытый мир с нелинейным исследованием
+F040;profile_progression_meta_upgrade;intermediate;1;Профиль прогрессии: мета-прогрессия между забегами
+F041;profile_progression_loot_based;intermediate;1;Профиль прогрессии: лут-ориентированная RPG
+F042;profile_progression_deckbuilder;intermediate;1;Профиль прогрессии: развитие через колоду карт
+F043;profile_monet_premium_no_donat;intermediate;1;Профиль монетизации: премиум без доната
+F044;profile_monet_f2p_soft_currency;intermediate;1;Профиль монетизации: F2P с мягкой валютой и лайтовым донатом
+F045;profile_monet_f2p_battle_pass;intermediate;1;Профиль монетизации: F2P с battle pass
+F046;profile_monet_f2p_gacha;intermediate;1;Профиль монетизации: F2P с gacha-механикой
+F047;profile_monet_cosmetics_only;intermediate;1;Профиль монетизации: платные только косметические предметы
+F048;profile_control_pc_kbm;intermediate;1;Профиль управления: ПК, клавиатура + мышь для экшенов/шутеров
+F049;profile_control_gamepad;intermediate;1;Профиль управления: геймпад для action-RPG и платформеров
+F050;profile_control_mobile_one_hand;intermediate;1;Профиль управления: мобильная игра, управление одной рукой
+F051;profile_control_mobile_two_hands;intermediate;1;Профиль управления: мобильная игра, управление двумя руками
+F052;profile_control_pc_moba_like;intermediate;1;Профиль управления: ПК, управление в стиле MOBA
+F053;pattern_2d_action_roguelite;intermediate;1;Паттерн игры: 2D action-roguelite
+F054;pattern_3d_soulslike;intermediate;1;Паттерн игры: 3D souls-like action-RPG
+F055;pattern_2d_platformer_story;intermediate;1;Паттерн игры: сюжетный 2D платформер
+F056;pattern_mobile_match3_f2p;intermediate;1;Паттерн игры: мобильный match-3 F2P
+F057;pattern_mobile_gacha_rpg;intermediate;1;Паттерн игры: мобильная gacha RPG
+F058;pattern_pc_moba;intermediate;1;Паттерн игры: ПК MOBA
+F059;pattern_pc_looter_shooter;intermediate;1;Паттерн игры: ПК looter-shooter
+F060;pattern_deckbuilder_roguelike;intermediate;1;Паттерн игры: roguelike deckbuilder
+F061;pattern_isometric_arpg_looter;intermediate;1;Паттерн игры: изометрическая ARPG с лутом
+F062;pattern_open_world_action_rpg;intermediate;1;Паттерн игры: action-RPG в открытом мире
+F063;candidates_combat_dead_cells_hades;intermediate;1;Набор референсов по боёвке: Dead Cells, Hades
+F064;candidates_combat_dark_souls_elden_ring;intermediate;1;Набор референсов по боёвке: Dark Souls, Elden Ring
+F065;candidates_combat_enter_gungeon_nuclear_throne;intermediate;1;Набор референсов по боёвке: Enter the Gungeon, Nuclear Throne
+F066;candidates_progression_hades_dead_cells;intermediate;1;Набор референсов по прогрессии: Hades, Dead Cells
+F067;candidates_progression_slay_the_spire_monster_train;intermediate;1;Набор референсов по прогрессии: Slay the Spire, Monster Train
+F068;candidates_monetization_genshin_impact;intermediate;1;Набор референсов по монетизации: Genshin Impact
+F069;candidates_monetization_battle_pass_shooters;intermediate;1;Набор референсов по монетизации battle pass: Fortnite, Apex Legends, PUBG
+F070;candidates_monetization_match3;intermediate;1;Набор референсов по монетизации match-3: Candy Crush Saga и аналоги
+F071;rec_combat_dead_cells;target;1;Рекомендация по боёвке: посмотреть Dead Cells
+F072;rec_combat_hades;target;1;Рекомендация по боёвке: посмотреть Hades
+F073;rec_combat_dark_souls;target;1;Рекомендация по боёвке: посмотреть Dark Souls
+F074;rec_combat_elden_ring;target;1;Рекомендация по боёвке: посмотреть Elden Ring
+F075;rec_combat_enter_the_gungeon;target;1;Рекомендация по боёвке: посмотреть Enter the Gungeon
+F076;rec_combat_nuclear_throne;target;1;Рекомендация по боёвке: посмотреть Nuclear Throne
+F077;rec_progression_hades;target;1;Рекомендация по прогрессии: посмотреть Hades
+F078;rec_progression_dead_cells;target;1;Рекомендация по прогрессии: посмотреть Dead Cells
+F079;rec_progression_slay_the_spire;target;1;Рекомендация по прогрессии: посмотреть Slay the Spire
+F080;rec_progression_monster_train;target;1;Рекомендация по прогрессии: посмотреть Monster Train
+F081;rec_monetization_genshin_impact;target;1;Рекомендация по монетизации: посмотреть Genshin Impact
+F082;rec_monetization_fortnite;target;1;Рекомендация по монетизации: посмотреть Fortnite
+F083;rec_monetization_candy_crush;target;1;Рекомендация по монетизации: посмотреть Candy Crush Saga
+F084;rec_monetization_rocket_league;target;1;Рекомендация по монетизации: посмотреть Rocket League
+F085;rec_monetization_pubg;target;1;Рекомендация по монетизации: посмотреть PUBG / Apex Legends
+F086;rec_control_pc_action;target;1;Рекомендация по управлению: посмотреть Devil May Cry 5 / Doom Eternal
+F087;rec_control_pc_moba;target;1;Рекомендация по управлению: посмотреть League of Legends / Dota 2
+F088;rec_control_mobile_one_hand;target;1;Рекомендация по управлению: посмотреть Clash Royale / Archero
+F089;rec_control_mobile_two_hands;target;1;Рекомендация по управлению: посмотреть Genshin Impact / Honkai Star Rail
+F090;rec_control_platformer_precise;target;1;Рекомендация по управлению: посмотреть Celeste / Hollow Knight
+F091;rec_level_design_metroidvania;target;1;Рекомендация по левел-дизайну: посмотреть Hollow Knight / Ori
+F092;rec_level_design_open_world;target;1;Рекомендация по левел-дизайну: посмотреть The Legend of Zelda: Breath of the Wild / Elden Ring
+F093;rec_level_design_roguelite_rooms;target;1;Рекомендация по левел-дизайну: посмотреть структуру комнат в Hades / Dead Cells
+F094;rec_level_design_lanes_moba;target;1;Рекомендация по левел-дизайну: посмотреть карту Summoner’s Rift / аналогичные MOBA карты
+F095;rec_level_design_match3;target;1;Рекомендация по левел-дизайну: посмотреть структуру уровней в Candy Crush Saga
+F096;rec_meta_progression_roguelite;target;1;Рекомендация по мета-прогрессии: посмотреть Hades / Rogue Legacy
+F097;rec_meta_progression_battle_pass;target;1;Рекомендация по мета-прогрессии: посмотреть battle pass в Fortnite / Apex Legends
+F098;rec_meta_progression_gacha;target;1;Рекомендация по мета-прогрессии: посмотреть долгосрочную прогрессию в Genshin Impact
+F099;rec_meta_progression_deckbuilder;target;1;Рекомендация по мета-прогрессии: посмотреть Slay the Spire / Monster Train
+F100;rec_meta_progression_moba;target;1;Рекомендация по мета-прогрессии: посмотреть progression-системы в League of Legends / Dota 2
