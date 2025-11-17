@@ -161,6 +161,128 @@ public partial class MainForm : Form
 
 		form.Show();  
 	}
+	
+	private void buttonLoadPreset_Click(object sender, EventArgs e)
+	{
+		if (_kb == null || _kb.Facts.Count == 0)
+		{
+			MessageBox.Show("Сначала загрузите базу знаний (facts.csv и rules.csv).",
+				"Нет базы знаний", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			return;
+		}
+	
+		using var ofd = new OpenFileDialog();
+		ofd.Title = "Выберите файл с преднастройками (аксиомы и цель)";
+		ofd.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
+	
+		if (ofd.ShowDialog() != DialogResult.OK)
+			return;
+	
+		string[] allLines;
+		try
+		{
+			allLines = File.ReadAllLines(ofd.FileName);
+		}
+		catch (Exception ex)
+		{
+			MessageBox.Show("Не удалось прочитать файл преднастроек:\n" + ex.Message,
+				"Ошибка чтения файла", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			return;
+		}
+	
+		var lines = allLines
+			.Where(l => !string.IsNullOrWhiteSpace(l))
+			.ToArray();
+	
+		if (lines.Length < 2)
+		{
+			MessageBox.Show("Ожидаются минимум две непустые строки:\n" +
+							"1) F***; F***; ... (аксиомы)\n" +
+							"2) F*** (цель)",
+				"Неверный формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			return;
+		}
+	
+		var axiomsLine = lines[0];
+		var separators = new[] { ';', ',', ' ' };
+	
+		var axiomIds = axiomsLine
+			.Split(separators, StringSplitOptions.RemoveEmptyEntries)
+			.Select(s => s.Trim())
+			.Where(s => !string.IsNullOrEmpty(s))
+			.ToList();
+	
+		var goalLine = lines[1];
+		var goalId = goalLine.Trim();
+	
+		if (axiomIds.Count == 0)
+		{
+			MessageBox.Show("В первой строке не найдено ни одного идентификатора факта.",
+				"Неверный формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			return;
+		}
+	
+		if (string.IsNullOrEmpty(goalId))
+		{
+			MessageBox.Show("Во второй строке не найден идентификатор целевого факта.",
+				"Неверный формат", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			return;
+		}
+	
+		var unknownAxioms = axiomIds
+			.Where(id => !_kb.Facts.ContainsKey(id))
+			.ToList();
+	
+		if (!_kb.Facts.ContainsKey(goalId))
+		{
+			MessageBox.Show($"Целевой факт '{goalId}' отсутствует в базе знаний.",
+				"Неизвестная цель", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			return;
+		}
+	
+		if (unknownAxioms.Count > 0)
+		{
+			var msg = "Следующие аксиомы отсутствуют в базе знаний:\n" +
+					  string.Join(", ", unknownAxioms);
+			MessageBox.Show(msg, "Неизвестные факты", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+		}
+	
+		for (int i = 0; i < checkedListBoxFacts.Items.Count; i++)
+		{
+			checkedListBoxFacts.SetItemChecked(i, false);
+		}
+	
+		for (int i = 0; i < checkedListBoxFacts.Items.Count; i++)
+		{
+			if (checkedListBoxFacts.Items[i] is Fact fact &&
+				axiomIds.Contains(fact.Id))
+			{
+				checkedListBoxFacts.SetItemChecked(i, true);
+			}
+		}
+	
+		bool goalFoundInCombo = false;
+		for (int i = 0; i < comboBoxGoal.Items.Count; i++)
+		{
+			if (comboBoxGoal.Items[i] is Fact f && f.Id == goalId)
+			{
+				comboBoxGoal.SelectedIndex = i;
+				goalFoundInCombo = true;
+				break;
+			}
+		}
+	
+		if (!goalFoundInCombo)
+		{
+			// Такое возможно, если цель не помечена как target в facts.csv
+			MessageBox.Show($"Целевой факт '{goalId}' есть в базе, " +
+							"но не попадает в список целей (Kind != Target).",
+				"Цель не в списке", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+	
+		MessageBox.Show("Преднастройки успешно применены.",
+			"Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
+	}
 }
 
 

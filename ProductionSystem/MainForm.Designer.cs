@@ -38,6 +38,7 @@ partial class MainForm
 		buttonBackward = new System.Windows.Forms.Button();
 		buttonClearSelection = new System.Windows.Forms.Button();
 		buttonGraph = new System.Windows.Forms.Button();
+		buttonLoadPreset = new System.Windows.Forms.Button();
 		SuspendLayout();
 		// 
 		// checkedListBoxFacts
@@ -81,9 +82,9 @@ partial class MainForm
 		buttonSelectFacts.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 		buttonSelectFacts.FlatAppearance.BorderSize = 2;
 		buttonSelectFacts.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-		buttonSelectFacts.Location = new System.Drawing.Point(551, 8);
+		buttonSelectFacts.Location = new System.Drawing.Point(550, 8);
 		buttonSelectFacts.Name = "buttonSelectFacts";
-		buttonSelectFacts.Size = new System.Drawing.Size(119, 52);
+		buttonSelectFacts.Size = new System.Drawing.Size(119, 34);
 		buttonSelectFacts.TabIndex = 3;
 		buttonSelectFacts.Text = "Load Facts";
 		buttonSelectFacts.UseVisualStyleBackColor = true;
@@ -95,7 +96,7 @@ partial class MainForm
 		buttonSelectRules.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
 		buttonSelectRules.Location = new System.Drawing.Point(676, 8);
 		buttonSelectRules.Name = "buttonSelectRules";
-		buttonSelectRules.Size = new System.Drawing.Size(119, 52);
+		buttonSelectRules.Size = new System.Drawing.Size(119, 34);
 		buttonSelectRules.TabIndex = 4;
 		buttonSelectRules.Text = "Load Rules";
 		buttonSelectRules.UseVisualStyleBackColor = true;
@@ -105,9 +106,9 @@ partial class MainForm
 		// 
 		buttonForward.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
 		buttonForward.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-		buttonForward.Location = new System.Drawing.Point(551, 115);
+		buttonForward.Location = new System.Drawing.Point(551, 133);
 		buttonForward.Name = "buttonForward";
-		buttonForward.Size = new System.Drawing.Size(119, 52);
+		buttonForward.Size = new System.Drawing.Size(119, 34);
 		buttonForward.TabIndex = 5;
 		buttonForward.Text = "Forward";
 		buttonForward.UseVisualStyleBackColor = true;
@@ -117,9 +118,9 @@ partial class MainForm
 		// 
 		buttonBackward.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
 		buttonBackward.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-		buttonBackward.Location = new System.Drawing.Point(676, 115);
+		buttonBackward.Location = new System.Drawing.Point(676, 133);
 		buttonBackward.Name = "buttonBackward";
-		buttonBackward.Size = new System.Drawing.Size(119, 52);
+		buttonBackward.Size = new System.Drawing.Size(119, 34);
 		buttonBackward.TabIndex = 6;
 		buttonBackward.Text = "Backward";
 		buttonBackward.UseVisualStyleBackColor = true;
@@ -129,9 +130,9 @@ partial class MainForm
 		// 
 		buttonClearSelection.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
 		buttonClearSelection.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-		buttonClearSelection.Location = new System.Drawing.Point(551, 66);
+		buttonClearSelection.Location = new System.Drawing.Point(549, 48);
 		buttonClearSelection.Name = "buttonClearSelection";
-		buttonClearSelection.Size = new System.Drawing.Size(120, 43);
+		buttonClearSelection.Size = new System.Drawing.Size(120, 34);
 		buttonClearSelection.TabIndex = 7;
 		buttonClearSelection.Text = "Clear Selection";
 		buttonClearSelection.UseVisualStyleBackColor = true;
@@ -141,19 +142,32 @@ partial class MainForm
 		// 
 		buttonGraph.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
 		buttonGraph.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-		buttonGraph.Location = new System.Drawing.Point(676, 66);
+		buttonGraph.Location = new System.Drawing.Point(551, 88);
 		buttonGraph.Name = "buttonGraph";
-		buttonGraph.Size = new System.Drawing.Size(120, 43);
+		buttonGraph.Size = new System.Drawing.Size(244, 34);
 		buttonGraph.TabIndex = 8;
 		buttonGraph.Text = "Clear Selection";
 		buttonGraph.UseVisualStyleBackColor = true;
 		buttonGraph.Click += buttonGraph_Click;
+		// 
+		// buttonLoadPreset
+		// 
+		buttonLoadPreset.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
+		buttonLoadPreset.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+		buttonLoadPreset.Location = new System.Drawing.Point(675, 48);
+		buttonLoadPreset.Name = "buttonLoadPreset";
+		buttonLoadPreset.Size = new System.Drawing.Size(120, 34);
+		buttonLoadPreset.TabIndex = 9;
+		buttonLoadPreset.Text = "Load Preset";
+		buttonLoadPreset.UseVisualStyleBackColor = true;
+		buttonLoadPreset.Click += buttonLoadPreset_Click;
 		// 
 		// MainForm
 		// 
 		AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 		AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 		ClientSize = new System.Drawing.Size(813, 411);
+		Controls.Add(buttonLoadPreset);
 		Controls.Add(buttonGraph);
 		Controls.Add(buttonClearSelection);
 		Controls.Add(buttonBackward);
@@ -168,6 +182,8 @@ partial class MainForm
 		ResumeLayout(false);
 		PerformLayout();
 	}
+
+	private System.Windows.Forms.Button buttonLoadPreset;
 
 	private System.Windows.Forms.Button buttonGraph;
 
