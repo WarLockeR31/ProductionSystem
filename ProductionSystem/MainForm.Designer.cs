@@ -146,7 +146,7 @@ partial class MainForm
 		buttonGraph.Name = "buttonGraph";
 		buttonGraph.Size = new System.Drawing.Size(244, 34);
 		buttonGraph.TabIndex = 8;
-		buttonGraph.Text = "Clear Selection";
+		buttonGraph.Text = "Open Graph";
 		buttonGraph.UseVisualStyleBackColor = true;
 		buttonGraph.Click += buttonGraph_Click;
 		// 
