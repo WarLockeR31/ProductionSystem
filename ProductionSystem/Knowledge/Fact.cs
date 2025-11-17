@@ -1,4 +1,4 @@
-namespace ProductionSystem;
+namespace ProductionSystem.Knowledge;
 
 public enum FactKind
 {

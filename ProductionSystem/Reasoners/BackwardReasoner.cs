@@ -1,3 +1,5 @@
+using ProductionSystem.Knowledge;
+
 namespace ProductionSystem.Reasoners;
 
 class GoalFrame(string factId, Rule? currentRule)

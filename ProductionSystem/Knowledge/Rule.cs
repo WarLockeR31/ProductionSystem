@@ -1,4 +1,4 @@
-namespace ProductionSystem;
+namespace ProductionSystem.Knowledge;
 
 public class Rule(string id, string conclusion, string explanation)
 {

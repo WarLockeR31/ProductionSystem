@@ -1,4 +1,5 @@
 using System.Text;
+using ProductionSystem.Knowledge;
 
 namespace ProductionSystem.Reasoners;
 

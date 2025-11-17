@@ -1,3 +1,5 @@
+using ProductionSystem.Knowledge;
+
 namespace ProductionSystem.Reasoners;
 
 public class ForwardStep(Rule? rule, string newFactId)
